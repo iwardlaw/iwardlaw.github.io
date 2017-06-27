@@ -260,3 +260,5 @@ Small Device Styles
 .site-menu-button { width: 96%; height: 90%; margin: auto; border-style: solid; border-width: 1px; border-color: #CCC; text-align: center; color: #EEE; font-weight: bold; }
 
 .site-menu-button:hover { color: #FFF; background-color: #555; cursor: pointer; }
+
+.site-menu-button.disabled { color: #AAA; background-color: #555; cursor: default; }

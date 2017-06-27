@@ -36,3 +36,9 @@
   background-color: #555;
   cursor: pointer;
 }
+
+.site-menu-button.disabled {
+  color: #AAA;
+  background-color: #555;
+  cursor: default;
+}
