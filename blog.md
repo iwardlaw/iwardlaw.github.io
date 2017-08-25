@@ -1,4 +1,4 @@
-<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="/assets/js/menu-nav.js"></script>
 
 <div id="site-menu-home" class="site-menu">
