@@ -3,6 +3,79 @@
 
 @import "{{ site.theme }}";
 
+body {
+  font-size: 0.95em;
+}
+
+.bullet-addendum.res {
+  padding-left: 1em;
+}
+
+.bullet-point-one {
+  line-height: 1.3em;
+}
+
+.bullet-point-one + .bullet-point-one {
+  margin-top: -0.6em;
+}
+
+.bullet-point-two {
+  line-height: 1.3em;
+  margin-top: 0.1em;
+}
+
+.bullet-point-two:not(.contains-sublist) + .bullet-point-two {
+  margin-top: 0.3em;
+}
+
+.bullet-point-three {
+  margin-top: 0.1em;
+}
+
+.bullet-point-three + .bullet-point-three {
+  margin-top: 0.15em;
+}
+
+.collapse-spans {
+  clear: both;
+}
+
+.contains-sublist + li {
+  margin-top: -0.5em;
+}
+
+.invisible {
+  display: none;
+}
+
+.job-description {
+  padding-left: 1em;
+}
+
+.job-duration {
+  float: right;
+}
+
+.job-employer-group {
+  line-height: 1.2em;
+}
+
+.job-title {
+  float: left;
+}
+
+.job-title-and-duration {
+  font-weight: bold;
+}
+
+.language-list {
+  margin-left: 5em;
+}
+
+.language-list-header {
+  float: left;
+}
+
 .site-menu {
   display: table;
   margin: 0;
@@ -28,6 +101,7 @@
   border-color: #CCC;
   text-align: center;
   color: #EEE;
+  font-size: 1em;
   font-weight: bold;
 }
 
@@ -41,4 +115,14 @@
   color: #AAA;
   background-color: #555;
   cursor: default;
+}
+
+.site-menu-button-text {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 0.1em;
+}
+
+.sublist {
+  list-style: circle;
 }

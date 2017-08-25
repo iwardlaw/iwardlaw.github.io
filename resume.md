@@ -2,7 +2,175 @@
 <script src="/assets/js/menu-nav.js"></script>
 
 <div id="site-menu-home" class="site-menu">
-  <div id="site-menu-button-containter-home" class="site-menu-button-container"><div id="site-menu-button-home" class="site-menu-button">Home</div></div><div id="site-menu-button-container-blog" class="site-menu-button-container"><div id="site-menu-button-blog" class="site-menu-button">Blog</div></div><div id="site-menu-button-container-projects" class="site-menu-button-container"><div id="site-menu-button-projects" class="site-menu-button">Projects</div></div><div id="site-menu-button-container-resume" class="site-menu-button-container"><div id="site-menu-button-resume" class="site-menu-button disabled">R&#233;sum&#233;</div></div><div id="site-menu-button-container-contact" class="site-menu-button-container"><div id="site-menu-button-contact" class="site-menu-button">Contact</div></div>
+  <div id="site-menu-button-containter-home" class="site-menu-button-container"><div id="site-menu-button-home" class="site-menu-button"><span class="site-menu-button-text">Home</span></div></div><div id="site-menu-button-container-blog" class="site-menu-button-container"><div id="site-menu-button-blog" class="site-menu-button"><span class="site-menu-button-text">Blog</span></div></div><div id="site-menu-button-container-projects" class="site-menu-button-container"><div id="site-menu-button-projects" class="site-menu-button"><span class="site-menu-button-text">Projects</span></div></div><div id="site-menu-button-container-resume" class="site-menu-button-container"><div id="site-menu-button-resume" class="site-menu-button disabled"><span class="site-menu-button-text">R&#233;sum&#233;</span></div></div><div id="site-menu-button-container-contact" class="site-menu-button-container"><div id="site-menu-button-contact" class="site-menu-button"><span class="site-menu-button-text">Contact</span></div></div>
 </div>
 
 # R&#233;sum&#233; #
+
+* * *
+
+### Education ###
+
+<ul>
+  <li class="bullet-point-one"><p><strong>Master of Science in Computer Science</strong><br>
+    <span class="bullet-addendum res">University of Arkansas at Little Rock, Little Rock, AR – Expected 2017 | GPA 3.920</span></p></li>
+  <li class="bullet-point-one"><p><strong>Bachelor of Fine Arts in Creative Writing | Bachelor of Arts in English</strong><br>
+    <span class="bullet-addendum res">Arkansas Tech University, Russellville, AR – 2009 | GPA 3.726 – Magna Cum Laude</span></p></li>
+</ul>
+
+* * *
+
+### Awards and Recognition ###
+
+<ul>
+  <li class="bullet-point-one"><p><strong>Course project selected for interstate academic commercialization forum</strong><br>
+    <span class="bullet-addendum res">Networking – Spring 2015</span></p></li>
+  <li class="bullet-point-one"><p><strong>Evaluated as Exceeds Expectations</strong><br>
+    <span class="bullet-addendum res">Walmart – 2012, 2013, 2014, 2015</span></p></li>
+  <li class="bullet-point-one"><p><strong>Best Overall Project</strong><br>
+    <span class="bullet-addendum res">Advanced Game Programming – Spring 2013</span></p></li>
+  <li class="bullet-point-one"><p><strong>Employee of the Month, Third Shift</strong><br>
+    <span class="bullet-addendum res">Walmart – April 2013</span></p></li>
+  <li class="bullet-point-one"><p><strong>Dean’s List</strong><br>
+    <span class="bullet-addendum res">Arkansas Tech University – Fall 2007, Spring 2008, Fall 2008, Spring 2009, Spring 2012</span></p></li>
+</ul>
+
+* * *
+
+### Employment History ###
+
+<div id="graduate-research-assistant-may16-present" class="job-container">
+  <div class="job-title-and-duration">
+    <span class="job-title">Graduate Research Assistant</span>
+    <span class="job-duration">May 2016 – Present</span>
+    <div class="collapse-spans"></div>
+  </div>
+  <div class="job-description">
+    <span class="job-employer">UA Little Rock Emerging Analytics Center, Little Rock, AR</span>
+    <ul class="job-activities">
+      <li class="bullet-point-two">Work on a team to create a virtual-reality video game shown at the ICAT-EGVE 2016 conference.</li>
+      <li class="bullet-point-two">Develop a prototype tangible interface system for augmented-reality-based board gaming.</li>
+      <li class="bullet-point-two">Demonstrate custom VR and AR applications to visitors from academia, the government, and the public.</li>
+      <li class="bullet-point-two">Brainstorm project and research ideas with the full EAC team of students and staff.</li>
+      <li class="bullet-point-two">Volunteer for setup, takedown, transportation, and general preparations for events both on- and off-site.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="graduate-teaching-assistant-spr14-aug16-may17" class="job-container">
+  <div class="job-title-and-duration">
+    <span class="job-title">Graduate Teaching Assistant</span>
+    <span class="job-duration">Spring Semester 2014 | Aug 2016 – May 2017</span>
+    <div class="collapse-spans"></div>
+  </div>
+  <div class="job-description">
+    <span class="job-employer">UA Little Rock Computer Science Department, Little Rock, AR</span>
+    <ul class="job-activities">
+      <li class="bullet-point-two">Graded assignments and programs for the undergraduate Operating Systems and Database Concepts courses.</li>
+      <li class="bullet-point-two">Researched operating systems and database design to supplement my own knowledge.</li>
+      <li class="bullet-point-two">Devised and executed a grading method to ensure equity across each class.</li>
+      <li class="bullet-point-two">Worked directly with the instructors to validate my judgment as needed.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="graduate-assistant-aug15-jul16" class="job-container">
+  <div class="job-title-and-duration">
+    <span class="job-title">Graduate Assistant</span>
+    <span class="job-duration">Aug 2015 – Jul 2016</span>
+    <div class="collapse-spans"></div>
+  </div>
+  <div class="job-description">
+    <span class="job-employer">UA Little Rock Computer Science Department, Little Rock, AR</span>
+    <ul class="job-activities">
+      <li class="bullet-point-two">Created and maintained web surveys for a study with UAMS and Arkansas Children’s Hospital.</li>
+      <li class="bullet-point-two">Designed and implemented prototype web application and client software for geolocating UAVs (drones).</li>
+      <li class="bullet-point-two">Provided one-on-one computer-science tutoring to undergraduate and high-school researchers.</li>
+      <li class="bullet-point-two">Edited research papers to sharpen grammar, style, and content.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="electronics-sales-associate-dec14-dec15" class="job-container">
+  <div class="job-title-and-duration">
+    <span class="job-title">Electronics Sales Associate</span>
+    <span class="job-duration">Dec 2014 – Dec 2015</span>
+    <div class="collapse-spans"></div>
+  </div>
+  <div class="job-description">
+    <span class="job-employer">Walmart Supercenter #5706, Little Rock, AR</span>
+    <ul class="job-activities">
+      <li class="bullet-point-two">Informed customers on wireless phones and carrier plans, troubleshooting problems regularly.</li>
+      <li class="bullet-point-two">Continuously learned the field of consumer electronics to help customers make knowledgeable purchases.</li>
+      <li class="bullet-point-two">Trusted to handle and sell high-value merchandise and to validate the arrival of new high-dollar items.</li>
+      <li class="bullet-point-two">Mastered additional tasks in other departments such as photo center, sporting goods, and fabrics.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="overnight-stocker-jun11-dec14" class="job-container">
+  <div class="job-title-and-duration">
+    <span class="job-title">Overnight Stocker</span>
+    <span class="job-duration">Jun 2011 – Dec 2014</span>
+    <div class="collapse-spans"></div>
+  </div>
+  <div class="job-description">
+    <div class="job-employer-group">
+      <span class="job-employer">Walmart Supercenter #5706, Little Rock, AR | Sep 2014 – Dec 2014</span><br>
+      <span class="job-employer">Walmart Supercenter #4460, North Little Rock, AR | Mar 2013 – Sep 2014</span><br>
+      <span class="job-employer">Walmart Supercenter #0058, Russellville, AR | Jun 2011 – Mar 2013</span>
+    </div>
+    <ul class="job-activities">
+      <li class="bullet-point-two" style="margin-top: 0.25em">Supervised nightly operations in the department of frozen foods.</li>
+      <li class="bullet-point-two">Actively assisted customers seeking the locations, prices, and availability of items throughout the store.</li>
+      <li class="bullet-point-two">Maintained sales-ﬂoor and backroom inventory; rapidly mastered company software used for this purpose.</li>
+      <li class="bullet-point-two">Expanded duties from previous stores to encompass dairy department and learn new layout upon transfer.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="administrative-assistant-aug08-may09" class="job-container">
+  <div class="job-title-and-duration">
+    <span class="job-title">Administrative Assistant</span>
+    <span class="job-duration">Aug 2008 – May 2009</span>
+    <div class="collapse-spans"></div>
+  </div>
+  <div class="job-description">
+    <span class="job-employer">Arkansas Tech University English Department, Russellville, AR</span>
+    <ul class="job-activities">
+      <li class="bullet-point-two">Entrusted with sensitive information to create, maintain, and destroy student and faculty records.</li>
+      <li class="bullet-point-two">Acted as the department’s liaison to publishing companies by ordering desk copies of professors’ textbooks.</li>
+      <li class="bullet-point-two">Took initiative in fulfilling specific requests of staff, students, and guests in addition to general duties.</li>
+    </ul>
+  </div>
+</div>
+
+* * *
+
+### Skills and Experience ###
+
+<ul>
+  <li class="bullet-point-two contains-sublist">
+    Adept in a variety of programming, scripting, and markup languages:
+    <ul class="sublist">
+      <li class="bullet-point-three"><span class="language-list-header">Advanced:</span><div class="language-list">C++</div></li>
+      <li class="bullet-point-three"><span class="language-list-header">Proficient:</span><div class="language-list">Python, C#, C, JavaScript with jQuery, HTML with CSS, PHP, BASH, Markdown, SQL</div></li>
+      <li class="bullet-point-three"><span class="language-list-header">Familiar:</span><div class="language-list">Java, Objective-C, YAML</div></li>
+    </ul>
+  </li>
+  <li class="bullet-point-two">Regular user of Unity 3D for over one and one-half years.</li>
+  <li class="bullet-point-two">Well-versed in Microsoft Visual Studio,  Office products, and Windows.</li>
+  <li class="bullet-point-two">Understand testing throughout development, including via source-code debuggers and console printouts.</li>
+  <li class="bullet-point-two">Knowledgeable of file-management practices such as code legibility and version control, including Git.</li>
+  <li class="bullet-point-two">Student of user interfaces and user experience; excelled in course on usability testing and design.</li>
+  <li class="bullet-point-two">Worked in a pair to develop an indoor location system for Android mobile devices using Bluetooth Low Energy.</li>
+  <li class="bullet-point-two">Written multiple data-processing programs, including a parser for a context-free grammar and a metacompiler.</li>
+  <li class="bullet-point-two">Experience running Apache Server on Linux and creating web pages incorporating MySQL.</li>
+  <li class="bullet-point-two">Oversaw a staﬀ of 21 as editor of <i>Nebo: A Literary Journal</i> to ensure careful construction of a quality periodical.</li>
+  <li class="bullet-point-two">Exceptional communication skills, demonstrated by high GPA in English and creative writing.</li>
+</ul>
+
+* * *
+
+<br>
+_References available upon request._
