@@ -13,9 +13,9 @@
 
 <ul>
   <li class="bullet-point-one"><p><strong>Master of Science in Computer Science</strong><br>
-    <span class="bullet-addendum res">University of Arkansas at Little Rock, Little Rock, AR – Expected 2017 | GPA 3.920</span></p></li>
+    <div class="bullet-addendum res">University of Arkansas at Little Rock, Little Rock, AR – Expected 2017 | GPA 3.920</div></p></li>
   <li class="bullet-point-one"><p><strong>Bachelor of Fine Arts in Creative Writing | Bachelor of Arts in English</strong><br>
-    <span class="bullet-addendum res">Arkansas Tech University, Russellville, AR – 2009 | GPA 3.726 – Magna Cum Laude</span></p></li>
+    <div class="bullet-addendum res">Arkansas Tech University, Russellville, AR – 2009 | GPA 3.726 – Magna Cum Laude</div></p></li>
 </ul>
 
 * * *
@@ -24,15 +24,15 @@
 
 <ul>
   <li class="bullet-point-one"><p><strong>Course project selected for interstate academic commercialization forum</strong><br>
-    <span class="bullet-addendum res">Networking – Spring 2015</span></p></li>
+    <div class="bullet-addendum res">Networking – Spring 2015</div></p></li>
   <li class="bullet-point-one"><p><strong>Evaluated as Exceeds Expectations</strong><br>
-    <span class="bullet-addendum res">Walmart – 2012, 2013, 2014, 2015</span></p></li>
+    <div class="bullet-addendum res">Walmart – 2012, 2013, 2014, 2015</div></p></li>
   <li class="bullet-point-one"><p><strong>Best Overall Project</strong><br>
-    <span class="bullet-addendum res">Advanced Game Programming – Spring 2013</span></p></li>
+    <div class="bullet-addendum res">Advanced Game Programming – Spring 2013</div></p></li>
   <li class="bullet-point-one"><p><strong>Employee of the Month, Third Shift</strong><br>
-    <span class="bullet-addendum res">Walmart – April 2013</span></p></li>
+    <div class="bullet-addendum res">Walmart – April 2013</div></p></li>
   <li class="bullet-point-one"><p><strong>Dean’s List</strong><br>
-    <span class="bullet-addendum res">Arkansas Tech University – Fall 2007, Spring 2008, Fall 2008, Spring 2009, Spring 2012</span></p></li>
+    <div class="bullet-addendum res">Arkansas Tech University – Fall 2007, Spring 2008, Fall 2008, Spring 2009, Spring 2012</div></p></li>
 </ul>
 
 * * *

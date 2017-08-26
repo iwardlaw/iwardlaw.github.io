@@ -255,7 +255,7 @@ Small Device Styles
   code, pre { min-width: 320px; max-width: 480px; font-size: 11px; } }
 body { font-size: 0.95em; }
 
-.bullet-addendum.res { padding-left: 1em; }
+.bullet-addendum.res { margin-top: -1em; padding-left: 1em; }
 
 .bullet-point-one { line-height: 1.3em; }
 
@@ -277,7 +277,7 @@ body { font-size: 0.95em; }
 
 .job-description { padding-left: 1em; }
 
-.job-duration { float: right; }
+.job-duration { float: right; text-align: right; }
 
 .job-employer-group { line-height: 1.2em; }
 
@@ -288,6 +288,8 @@ body { font-size: 0.95em; }
 .language-list { margin-left: 5em; }
 
 .language-list-header { float: left; }
+
+li:not(.sublist) { list-style: disc; }
 
 .site-menu { display: table; margin: 0; padding: 0; width: 100%; height: 31px; background-color: #222; }
 

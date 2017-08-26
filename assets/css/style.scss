@@ -8,6 +8,7 @@ body {
 }
 
 .bullet-addendum.res {
+  margin-top: -1em;
   padding-left: 1em;
 }
 
@@ -54,6 +55,7 @@ body {
 
 .job-duration {
   float: right;
+  text-align: right;
 }
 
 .job-employer-group {
@@ -74,6 +76,10 @@ body {
 
 .language-list-header {
   float: left;
+}
+
+li:not(.sublist) {
+  list-style: disc;
 }
 
 .site-menu {
