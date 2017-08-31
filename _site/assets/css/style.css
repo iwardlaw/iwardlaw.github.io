@@ -253,6 +253,8 @@ Small Device Styles
   h5 { font-size: 14px; }
   h6 { font-size: 12px; }
   code, pre { min-width: 320px; max-width: 480px; font-size: 11px; } }
+a:hover { font-weight: normal; }
+
 a:not([href]) { cursor: pointer; }
 
 body { font-size: 0.95em; }
