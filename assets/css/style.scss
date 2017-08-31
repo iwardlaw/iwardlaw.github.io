@@ -3,11 +3,7 @@
 
 @import "{{ site.theme }}";
 
-a {
-  font-weight: normal;
-}
-
-a:hover {
+a, a:link, a:visited, a:hover, a:active {
   font-weight: normal;
 }
 
