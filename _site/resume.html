@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width,maximum-scale=2">
     <meta name="description" content="iwardlaw.github.io : Personal Page">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=f6ac6fff1084fd82fc3dca113d0dceb1cddd13e5">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=23e61774b3f29d2260352a59ba091e753b213643">
 
     <title>iwardlaw.github.io</title>
   </head>
@@ -33,6 +33,8 @@
 
 <script src="/assets/js/menu-nav.js"></script>
 
+<script src="/assets/js/toggle-toc.js"></script>
+
 <div id="site-menu" class="site-menu">
   <div id="site-menu-button-containter-home" class="site-menu-button-container"><div id="site-menu-button-home" class="site-menu-button"><span class="site-menu-button-text">Home</span></div></div><div id="site-menu-button-container-blog" class="site-menu-button-container"><div id="site-menu-button-blog" class="site-menu-button"><span class="site-menu-button-text">Blog</span></div></div><div id="site-menu-button-container-projects" class="site-menu-button-container"><div id="site-menu-button-projects" class="site-menu-button"><span class="site-menu-button-text">Projects</span></div></div><div id="site-menu-button-container-resume" class="site-menu-button-container"><div id="site-menu-button-resume" class="site-menu-button disabled"><span class="site-menu-button-text">R&#233;sum&#233;</span></div></div><div id="site-menu-button-container-contact" class="site-menu-button-container"><div id="site-menu-button-contact" class="site-menu-button"><span class="site-menu-button-text">Contact</span></div></div>
 </div>
@@ -51,17 +53,6 @@
     <a href="#skills-and-experience">Skills and Experience</a>
   </div>
 </nav>
-
-<script>
-  function toggleTOC() {
-    if($(".toc-headings").is(":visible"))
-      $(".toc-toggle-text").html("show");
-    else
-      $(".toc-toggle-text").html("hide");
-
-    $(".toc-headings").toggle();
-  }
-</script>
 
 <hr />
 
@@ -101,10 +92,9 @@
   <h3>Employment History</h3>
 
   <div id="graduate-research-assistant-may16-present" class="job-container">
-    <div class="job-title-and-duration">
+    <div class="job-title-and-duration clearfix">
       <span class="job-title">Graduate Research Assistant</span>
       <span class="job-duration">May 2016 – Present</span>
-      <div class="collapse-spans"></div>
     </div>
     <div class="job-description">
       <span class="job-employer">UA Little Rock Emerging Analytics Center, Little Rock, AR</span>
@@ -119,10 +109,9 @@
   </div>
 
   <div id="graduate-teaching-assistant-spr14-aug16-may17" class="job-container">
-    <div class="job-title-and-duration">
+    <div class="job-title-and-duration clearfix">
       <span class="job-title">Graduate Teaching Assistant</span>
       <span class="job-duration">Spring Semester 2014 | Aug 2016 – May 2017</span>
-      <div class="collapse-spans"></div>
     </div>
     <div class="job-description">
       <span class="job-employer">UA Little Rock Computer Science Department, Little Rock, AR</span>
@@ -136,10 +125,9 @@
   </div>
 
   <div id="graduate-assistant-aug15-jul16" class="job-container">
-    <div class="job-title-and-duration">
+    <div class="job-title-and-duration clearfix">
       <span class="job-title">Graduate Assistant</span>
       <span class="job-duration">Aug 2015 – Jul 2016</span>
-      <div class="collapse-spans"></div>
     </div>
     <div class="job-description">
       <span class="job-employer">UA Little Rock Computer Science Department, Little Rock, AR</span>
@@ -153,10 +141,9 @@
   </div>
 
   <div id="electronics-sales-associate-dec14-dec15" class="job-container">
-    <div class="job-title-and-duration">
+    <div class="job-title-and-duration clearfix">
       <span class="job-title">Electronics Sales Associate</span>
       <span class="job-duration">Dec 2014 – Dec 2015</span>
-      <div class="collapse-spans"></div>
     </div>
     <div class="job-description">
       <span class="job-employer">Walmart Supercenter #5706, Little Rock, AR</span>
@@ -170,10 +157,9 @@
   </div>
 
   <div id="overnight-stocker-jun11-dec14" class="job-container">
-    <div class="job-title-and-duration">
+    <div class="job-title-and-duration clearfix">
       <span class="job-title">Overnight Stocker</span>
       <span class="job-duration">Jun 2011 – Dec 2014</span>
-      <div class="collapse-spans"></div>
     </div>
     <div class="job-description">
       <div class="job-employer-group">
@@ -191,10 +177,9 @@
   </div>
 
   <div id="administrative-assistant-aug08-may09" class="job-container">
-    <div class="job-title-and-duration">
+    <div class="job-title-and-duration clearfix">
       <span class="job-title">Administrative Assistant</span>
       <span class="job-duration">Aug 2008 – May 2009</span>
-      <div class="collapse-spans"></div>
     </div>
     <div class="job-description">
       <span class="job-employer">Arkansas Tech University English Department, Russellville, AR</span>

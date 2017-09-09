@@ -273,6 +273,8 @@ body { font-size: 0.95em; }
 
 .bullet-point-three + .bullet-point-three { margin-top: 0.15em; }
 
+.clearfix::after { content: ""; clear: both; display: table; }
+
 .collapse-spans { clear: both; }
 
 .contains-sublist + li { margin-top: -0.5em; }

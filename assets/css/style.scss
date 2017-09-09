@@ -45,8 +45,10 @@ body {
   margin-top: 0.15em;
 }
 
-.collapse-spans {
+.clearfix::after {
+  content: "";
   clear: both;
+  display: table;
 }
 
 .contains-sublist + li {
