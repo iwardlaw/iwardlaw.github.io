@@ -275,19 +275,17 @@ body { font-size: 0.95em; }
 
 .clearfix::after { content: ""; clear: both; display: table; }
 
-.collapse-spans { clear: both; }
-
 .contains-sublist + li { margin-top: -0.5em; }
+
+.float-left { float: left; text-align: left; }
+
+.float-right { float: right; text-align: right; }
 
 .invisible { display: none; }
 
 .job-description { padding-left: 1em; }
 
-.job-duration { float: right; text-align: right; }
-
 .job-employer-group { line-height: 1.2em; }
-
-.job-title { float: left; }
 
 .job-title-and-duration { font-weight: bold; }
 
@@ -307,14 +305,22 @@ body { font-size: 0.95em; }
 
 .site-menu-button-text { display: inline-block; vertical-align: middle; margin-top: 0.1em; }
 
+.smaller-text { font-size: 90%; }
+
 .toc { display: table; padding: 5px; border: 1px solid #A2A9B1; background-color: #E0E0E0; font-size: 90%; }
 
 .toc-title { text-align: center; line-height: 1em; }
 
-.toc-toggle { font-size: 90%; }
+.toc-title-text { display: inline-block; }
 
 .toc ul { list-style-type: none; }
 
+ul.sublist { list-style-type: circle; }
+
 ul:not(.sublist) { list-style-type: disc; }
 
-ul.sublist { list-style-type: circle; }
+.vertical-align-between { position: relative; top: 50%; }
+
+.vertical-align-inner { position: relative; top: -50%; }
+
+.vertical-align-outer { height: 5em; }

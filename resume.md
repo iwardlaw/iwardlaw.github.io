@@ -10,8 +10,9 @@
 
 <nav class="toc">
   <div class="toc-title">
-    <h5 style="display:inline-block">Contents</h5>
-    <span class="toc-toggle">[<a class="toc-toggle-text" onclick="toggleTOC()">hide</a>]</span>
+    <h5 class="toc-title-text">Contents</h5>
+    &nbsp;
+    [<a class="smaller-text toc-toggle-text" onclick="toggleTOC()">hide</a>]
   </div>
   <div class="toc-headings">
     <a href="#education">Education</a><br>
@@ -60,8 +61,8 @@
 
   <div id="graduate-research-assistant-may16-present" class="job-container">
     <div class="job-title-and-duration clearfix">
-      <span class="job-title">Graduate Research Assistant</span>
-      <span class="job-duration">May 2016 – Present</span>
+      <span class="float-left">Graduate Research Assistant</span>
+      <span class="float-right">May 2016 – Present</span>
     </div>
     <div class="job-description">
       <span class="job-employer">UA Little Rock Emerging Analytics Center, Little Rock, AR</span>
@@ -77,8 +78,8 @@
 
   <div id="graduate-teaching-assistant-spr14-aug16-may17" class="job-container">
     <div class="job-title-and-duration clearfix">
-      <span class="job-title">Graduate Teaching Assistant</span>
-      <span class="job-duration">Spring Semester 2014 | Aug 2016 – May 2017</span>
+      <span class="float-left">Graduate Teaching Assistant</span>
+      <span class="float-right">Spring Semester 2014 | Aug 2016 – May 2017</span>
     </div>
     <div class="job-description">
       <span class="job-employer">UA Little Rock Computer Science Department, Little Rock, AR</span>
@@ -93,8 +94,8 @@
 
   <div id="graduate-assistant-aug15-jul16" class="job-container">
     <div class="job-title-and-duration clearfix">
-      <span class="job-title">Graduate Assistant</span>
-      <span class="job-duration">Aug 2015 – Jul 2016</span>
+      <span class="float-left">Graduate Assistant</span>
+      <span class="float-right">Aug 2015 – Jul 2016</span>
     </div>
     <div class="job-description">
       <span class="job-employer">UA Little Rock Computer Science Department, Little Rock, AR</span>
@@ -109,8 +110,8 @@
 
   <div id="electronics-sales-associate-dec14-dec15" class="job-container">
     <div class="job-title-and-duration clearfix">
-      <span class="job-title">Electronics Sales Associate</span>
-      <span class="job-duration">Dec 2014 – Dec 2015</span>
+      <span class="float-left">Electronics Sales Associate</span>
+      <span class="float-right">Dec 2014 – Dec 2015</span>
     </div>
     <div class="job-description">
       <span class="job-employer">Walmart Supercenter #5706, Little Rock, AR</span>
@@ -125,8 +126,8 @@
 
   <div id="overnight-stocker-jun11-dec14" class="job-container">
     <div class="job-title-and-duration clearfix">
-      <span class="job-title">Overnight Stocker</span>
-      <span class="job-duration">Jun 2011 – Dec 2014</span>
+      <span class="float-left">Overnight Stocker</span>
+      <span class="float-right">Jun 2011 – Dec 2014</span>
     </div>
     <div class="job-description">
       <div class="job-employer-group">
@@ -145,8 +146,8 @@
 
   <div id="administrative-assistant-aug08-may09" class="job-container">
     <div class="job-title-and-duration clearfix">
-      <span class="job-title">Administrative Assistant</span>
-      <span class="job-duration">Aug 2008 – May 2009</span>
+      <span class="float-left">Administrative Assistant</span>
+      <span class="float-right">Aug 2008 – May 2009</span>
     </div>
     <div class="job-description">
       <span class="job-employer">Arkansas Tech University English Department, Russellville, AR</span>
