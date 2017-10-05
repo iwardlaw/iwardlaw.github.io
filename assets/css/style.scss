@@ -89,6 +89,25 @@ body {
   float: left;
 }
 
+a.portfolio-heading {
+  /*font-size: 1.7em;*/
+  /*color: #373737;*/
+  font-size: 24px;
+  margin: 10px 0;
+  font-weight: 700;
+  font-family: "Lucida Grande", "Calibri", Helvetica, Arial, sans-serif;
+  letter-spacing: -1px;
+}
+
+.portfolio-language-list {
+  font-size: 0.89em;
+  font-style: italic;
+}
+
+.portfolio-language-list-container {
+  margin-top: -1.2em;
+}
+
 .site-menu {
   display: table;
   margin: 0;
@@ -125,7 +144,7 @@ body {
 }
 
 .site-menu-button.disabled {
-  color: #AAA;
+  color: #B9B9B9;
   background-color: #555;
   cursor: default;
 }

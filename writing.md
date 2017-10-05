@@ -3,7 +3,7 @@
 
 <div id="site-menu" class="site-menu">
   <div id="site-menu-button-containter-home" class="site-menu-button-container">
-    <div id="site-menu-button-home" class="site-menu-button disabled">
+    <div id="site-menu-button-home" class="site-menu-button">
       <span class="site-menu-button-text">Home</span>
     </div>
   </div>
@@ -18,7 +18,7 @@
     </div>
   </div>
   <div id="site-menu-button-container-writing" class="site-menu-button-container">
-    <div id="site-menu-button-writing" class="site-menu-button">
+    <div id="site-menu-button-writing" class="site-menu-button disabled">
       <span class="site-menu-button-text">Writing</span>
     </div>
   </div>
@@ -29,4 +29,4 @@
   </div>
 </div>
 
-# Home #
+# Writing #
