@@ -3,6 +3,111 @@
 
 @import "{{ site.theme }}";
 
+a, a:link, a:visited, a:hover, a:active {
+  font-weight: normal;
+}
+
+a:not([href]) {
+  cursor: pointer;
+}
+
+body {
+  font-size: 0.95em;
+}
+
+.bullet-addendum.res {
+  margin-top: -1em;
+  padding-left: 1em;
+}
+
+.bullet-point-one {
+  line-height: 1.3em;
+}
+
+.bullet-point-one + .bullet-point-one {
+  margin-top: -0.6em;
+}
+
+.bullet-point-two {
+  line-height: 1.3em;
+  margin-top: 0.1em;
+}
+
+.bullet-point-two:not(.contains-sublist) + .bullet-point-two {
+  margin-top: 0.3em;
+}
+
+.bullet-point-three {
+  margin-top: 0.1em;
+}
+
+.bullet-point-three + .bullet-point-three {
+  margin-top: 0.15em;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.contains-sublist + li {
+  margin-top: -0.5em;
+}
+
+.float-left {
+  float: left;
+  text-align: left;
+}
+
+.float-right {
+  float: right;
+  text-align: right;
+}
+
+.invisible {
+  display: none;
+}
+
+.job-activities > bullet-point-two:first-of-type {
+  margin-top: 0.25em;
+}
+
+.job-description {
+  padding-left: 1em;
+}
+
+.job-position-group {
+  line-height: 1.2em;
+}
+
+.language-list {
+  margin-left: 5em;
+}
+
+.language-list-header {
+  float: left;
+}
+
+a.portfolio-heading {
+  /*font-size: 1.7em;*/
+  /*color: #373737;*/
+  font-size: 24px;
+  margin: 10px 0;
+  font-weight: 700;
+  font-family: "Lucida Grande", "Calibri", Helvetica, Arial, sans-serif;
+  letter-spacing: -1px;
+}
+
+.portfolio-language-list {
+  font-size: 0.89em;
+  font-style: italic;
+}
+
+.portfolio-language-list-container {
+  margin-top: -1.2em;
+}
+
 .site-menu {
   display: table;
   margin: 0;
@@ -28,6 +133,7 @@
   border-color: #CCC;
   text-align: center;
   color: #EEE;
+  font-size: 1em;
   font-weight: bold;
 }
 
@@ -38,7 +144,46 @@
 }
 
 .site-menu-button.disabled {
-  color: #AAA;
+  color: #B9B9B9;
   background-color: #555;
   cursor: default;
+}
+
+.site-menu-button-text {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 0.1em;
+}
+
+.smaller-text {
+  font-size: 90%;
+}
+
+.toc {
+  display: table;
+  padding: 5px;
+  border: 1px solid #A2A9B1;
+  background-color: #E0E0E0;
+  font-size: 90%;
+}
+
+.toc-title {
+  text-align: center;
+  line-height: 1em;
+}
+
+.toc-title-text {
+  display: inline-block;
+}
+
+.toc ul {
+  list-style-type: none;
+}
+
+ul.sublist {
+  list-style-type: circle;
+}
+
+ul:not(.sublist) {
+  list-style-type: disc;
 }
