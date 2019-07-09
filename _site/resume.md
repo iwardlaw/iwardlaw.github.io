@@ -91,7 +91,7 @@
 
   <div id="cae-nov17-present" class="job-container">
     <div class="job-employer-and-duration clearfix">
-      <span class="float-left"><strong>CAE</strong> – Sherwood, AR</span>
+      <span class="float-left"><strong>CAE USA</strong> – Sherwood, AR</span>
       <span class="float-right"><strong>Nov 2017 – Present</strong></span>
     </div>
     <div class="job-description">
