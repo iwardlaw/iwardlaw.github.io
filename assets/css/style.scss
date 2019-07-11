@@ -82,11 +82,15 @@ body {
 }
 
 .language-list {
-  margin-left: 5em;
+  display: flex;
 }
 
 .language-list-header {
-  float: left;
+  flex: 1;
+}
+
+.language-list-items {
+  flex: 8;
 }
 
 a.portfolio-heading {

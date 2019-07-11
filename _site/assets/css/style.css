@@ -300,9 +300,11 @@ body { font-size: 0.95em; }
 
 .job-position-group { line-height: 1.2em; }
 
-.language-list { margin-left: 5em; }
+.language-list { display: flex; }
 
-.language-list-header { float: left; }
+.language-list-header { flex: 1; }
+
+.language-list-items { flex: 8; }
 
 a.portfolio-heading { /*font-size: 1.7em;*/ /*color: #373737;*/ font-size: 24px; margin: 10px 0; font-weight: 700; font-family: "Lucida Grande", "Calibri", Helvetica, Arial, sans-serif; letter-spacing: -1px; }
 

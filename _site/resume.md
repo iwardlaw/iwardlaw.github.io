@@ -66,21 +66,21 @@
 
   <ul>
     <li class="bullet-point-one"><p><strong>CAE Champions: Excellence (x10), Empowerment (x2), Innovation (x2), One CAE (x1)</strong><br>
-      <div class="bullet-addendum res">CAE&nbsp;&nbsp;|&nbsp;&nbsp;2017 – 2019</div></p></li>
+      <div class="bullet-addendum res">CAE | 2017 – 2019</div></p></li>
     <li class="bullet-point-one"><p><strong>Spot Award</strong><br>
-      <div class="bullet-addendum res">CAE&nbsp;&nbsp;|&nbsp;&nbsp;June 2019</div></p></li>
+      <div class="bullet-addendum res">CAE | June 2019</div></p></li>
     <li class="bullet-point-one"><p><strong>Top Performer</strong><br>
-      <div class="bullet-addendum res">CAE&nbsp;&nbsp;|&nbsp;&nbsp;December 2018</div></p></li>
+      <div class="bullet-addendum res">CAE | December 2018</div></p></li>
     <li class="bullet-point-one"><p><strong>Course project selected for interstate academic commercialization forum</strong><br>
-      <div class="bullet-addendum res">Networking&nbsp;&nbsp;|&nbsp;&nbsp;Spring 2015</div></p></li>
+      <div class="bullet-addendum res">Networking | Spring 2015</div></p></li>
     <li class="bullet-point-one"><p><strong>Evaluated as Exceeds Expectations</strong><br>
-      <div class="bullet-addendum res">Walmart&nbsp;&nbsp;|&nbsp;&nbsp;2012, 2013, 2014, 2015</div></p></li>
+      <div class="bullet-addendum res">Walmart | 2012, 2013, 2014, 2015</div></p></li>
     <li class="bullet-point-one"><p><strong>Best Overall Project</strong><br>
-      <div class="bullet-addendum res">Advanced Game Programming&nbsp;&nbsp;|&nbsp;&nbsp;Spring 2013</div></p></li>
+      <div class="bullet-addendum res">Advanced Game Programming | Spring 2013</div></p></li>
     <li class="bullet-point-one"><p><strong>Employee of the Month, Third Shift</strong><br>
-      <div class="bullet-addendum res">Walmart&nbsp;&nbsp;|&nbsp;&nbsp;April 2013</div></p></li>
+      <div class="bullet-addendum res">Walmart | April 2013</div></p></li>
     <li class="bullet-point-one"><p><strong>Dean’s List</strong><br>
-      <div class="bullet-addendum res">Arkansas Tech University&nbsp;&nbsp;|&nbsp;&nbsp;Fall 2007, Spring 2008, Fall 2008, Spring 2009, Spring 2012</div></p></li>
+      <div class="bullet-addendum res">Arkansas Tech University | Fall 2007, Spring 2008, Fall 2008, Spring 2009, Spring 2012</div></p></li>
   </ul>
 </div>
 
@@ -186,9 +186,24 @@
     <li class="bullet-point-two contains-sublist">
       Adept in a variety of programming, scripting, and markup languages:
       <ul class="sublist">
-        <li class="bullet-point-three"><span class="language-list-header">Advanced:</span><div class="language-list">C#&nbsp;&nbsp;•&nbsp;&nbsp;C++&nbsp;&nbsp;•&nbsp;&nbsp;JavaScript&nbsp;&nbsp;•&nbsp;&nbsp;HTML&nbsp;&nbsp;•&nbsp;&nbsp;CSS</div></li>
-        <li class="bullet-point-three"><span class="language-list-header">Proficient:</span><div class="language-list">Python&nbsp;&nbsp;•&nbsp;&nbsp;C&nbsp;&nbsp;•&nbsp;&nbsp;Bash&nbsp;&nbsp;•&nbsp;&nbsp;PHP&nbsp;&nbsp;•&nbsp;&nbsp;Markdown&nbsp;&nbsp;•&nbsp;&nbsp;SQL</div></li>
-        <li class="bullet-point-three"><span class="language-list-header">Familiar:</span><div class="language-list">Java&nbsp;&nbsp;•&nbsp;&nbsp;Objective-C&nbsp;&nbsp;•&nbsp;&nbsp;YAML</div></li>
+        <li class="bullet-point-three">
+          <span class="language-list">
+            <span class="language-list-header">Advanced:</span>
+            <div class="language-list-items">C#&nbsp;&nbsp;•&nbsp;&nbsp;C++&nbsp;&nbsp;•&nbsp;&nbsp;JavaScript&nbsp;&nbsp;•&nbsp;&nbsp;HTML&nbsp;&nbsp;•&nbsp;&nbsp;CSS</div>
+          </span>
+        </li>
+        <li class="bullet-point-three">
+          <span class="language-list">
+            <span class="language-list-header">Proficient:</span>
+            <div class="language-list-items">Python&nbsp;&nbsp;•&nbsp;&nbsp;C&nbsp;&nbsp;•&nbsp;&nbsp;Bash&nbsp;&nbsp;•&nbsp;&nbsp;PHP&nbsp;&nbsp;•&nbsp;&nbsp;Markdown&nbsp;&nbsp;•&nbsp;&nbsp;SQL</div>
+          </span>
+        </li>
+        <li class="bullet-point-three">
+          <span class="language-list">
+            <span class="language-list-header">Familiar:</span>
+            <div class="language-list-items">Java&nbsp;&nbsp;•&nbsp;&nbsp;Objective-C&nbsp;&nbsp;•&nbsp;&nbsp;YAML</div>
+          </span>
+        </li>
       </ul>
     </li>
     <li class="bullet-point-two">Quickly promoted to full-time at CAE for strong, on-time application deliveries.</li>
