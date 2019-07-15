@@ -33,6 +33,26 @@
 
 * * *
 
+<a class="portfolio-heading" href="https://github.com/iwardlaw/Gaze-of-the-Abyss">Gaze of the Abyss</a>
+
+<div class="portfolio-language-list-container">
+  <span class="portfolio-language-list">Languages: C++</span>
+</div>
+
+A 2D space shooter that was my Advanced Game Programming project. One of the most challenging and rewarding programs I've made.
+
+* * *
+
+<a class="portfolio-heading" href="https://github.com/iwardlaw/Springboard">Springboard</a>
+
+<div class="portfolio-language-list-container">
+  <span class="portfolio-language-list">Languages: C#</span>
+</div>
+
+A system for augmented-reality board gaming that uses physical, tangible interfaces to manipulate virtual game objects.
+
+* * *
+
 <a class="portfolio-heading" href="https://github.com/iwardlaw/Unity-Tools">Unity Tools</a>
 
 <div class="portfolio-language-list-container">
@@ -46,13 +66,3 @@ Various tools I've created for use in Unity.
 - The **Waypoint Graph** tool facilitates object movement among a set of user-defined points.
 
 - The **Worldspace Textbox** tool delivers text-based interactions in world space instead of screen space. Necessary for using textboxes in head-mounted-display-based virtual reality.
-
-* * *
-
-<a class="portfolio-heading" href="https://github.com/iwardlaw/Springboard">Springboard</a>
-
-<div class="portfolio-language-list-container">
-  <span class="portfolio-language-list">Languages: C#</span>
-</div>
-
-A system for augmented-reality board gaming that uses physical, tangible interfaces to manipulate virtual game objects.
