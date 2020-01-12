@@ -127,12 +127,12 @@
   <div id="ualr-spr14-aug15-dec17" class="job-container">
     <div class="job-employer-and-duration clearfix">
       <span class="float-left"><strong>University of Arkansas at Little Rock</strong> – Little Rock, AR</span>
-      <span class="float-right"><strong>Spring Semester 2014&nbsp;&nbsp;|&nbsp;&nbsp;Aug 2015 – Dec 2017</strong></span>
+      <span class="float-right"><strong>Spring 2014&nbsp;&nbsp;|&nbsp;&nbsp;Aug 2015 – Dec 2017</strong></span>
     </div>
     <div class="job-description">
       <div class="job-position-group">
         <span class="job-position"><strong>Graduate Research Assistant</strong>, Emerging Analytics Center&nbsp;&nbsp;|&nbsp;&nbsp;May 2016 – Dec 2017</span><br>
-        <span class="job-position"><strong>Graduate Teaching Assistant</strong>, Computer Science Department&nbsp;&nbsp;|&nbsp;&nbsp;Spring Semester 2014 | Aug 2016 – May 2017</span><br>
+        <span class="job-position"><strong>Graduate Teaching Assistant</strong>, Computer Science Department&nbsp;&nbsp;|&nbsp;&nbsp;Spring 2014 | Aug 2016 – May 2017</span><br>
         <span class="job-position"><strong>Graduate Assistant</strong>, Computer Science Department&nbsp;&nbsp;|&nbsp;&nbsp;Aug 2015 – Jul 2016</span>
       </div>
       <ul class="job-activities">
