@@ -65,7 +65,7 @@
   <h3>Awards and Recognition</h3>
 
   <ul>
-    <li class="bullet-point-one"><p><strong>CAE Champions: Excellence (x11), Empowerment (x2), Innovation (x2), One CAE (x3)</strong><br>
+    <li class="bullet-point-one"><p><strong>CAE Champions: Excellence (x11), One CAE (x3), Empowerment (x2), Innovation (x2)</strong><br>
       <div class="bullet-addendum res">CAE | 2017 – 2019</div></p></li>
     <li class="bullet-point-one"><p><strong>Top Performer</strong><br>
       <div class="bullet-addendum res">CAE | December 2018, November 2019</div></p></li>
