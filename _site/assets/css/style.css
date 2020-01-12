@@ -292,6 +292,12 @@ body { font-size: 0.95em; }
 
 .float-right { float: right; text-align: right; }
 
+.header-container { display: flex; }
+
+.header-container h1, .header-container h2, .header-container h3, .header-container h4, .header-container h5, .header-container h6 { margin-top: 0; margin-bottom: 0; }
+
+.header-container .return-to-top { flex: 1; margin: auto; text-align: right; }
+
 .invisible { display: none; }
 
 .job-activities > bullet-point-two:first-of-type { margin-top: 0.25em; }
@@ -306,7 +312,7 @@ body { font-size: 0.95em; }
 
 .language-list-items { flex: 8; margin-left: 0.75em; }
 
-a.portfolio-heading { /*font-size: 1.7em;*/ /*color: #373737;*/ font-size: 24px; margin: 10px 0; font-weight: 700; font-family: "Lucida Grande", "Calibri", Helvetica, Arial, sans-serif; letter-spacing: -1px; }
+a.portfolio-heading { display: inline-block; font-size: 1.8em; margin-bottom: 0.65em; font-weight: 700; font-family: "Lucida Grande", "Calibri", Helvetica, Arial, sans-serif; }
 
 .portfolio-language-list { font-size: 0.89em; font-style: italic; }
 
@@ -316,13 +322,13 @@ a.portfolio-heading { /*font-size: 1.7em;*/ /*color: #373737;*/ font-size: 24px;
 
 .site-menu-button-container { display: table-cell; vertical-align: middle; width: 20%; height: 100%; }
 
-.site-menu-button { width: 96%; height: 90%; margin: auto; border-style: solid; border-width: 1px; border-color: #CCC; text-align: center; color: #EEE; font-size: 1em; font-weight: bold; }
+.site-menu-button { display: table; width: 96%; height: 90%; margin: auto; border-style: solid; border-width: 1px; border-color: #CCC; text-align: center; color: #EEE; font-size: 1em; font-weight: bold; }
 
 .site-menu-button:hover { color: #FFF; background-color: #555; cursor: pointer; }
 
 .site-menu-button.disabled { color: #B9B9B9; background-color: #555; cursor: default; }
 
-.site-menu-button-text { display: inline-block; vertical-align: middle; margin-top: 0.1em; }
+.site-menu-button-text { display: table-cell; vertical-align: middle; }
 
 .smaller-text { font-size: 90%; }
 

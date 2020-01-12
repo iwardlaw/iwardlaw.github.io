@@ -49,7 +49,12 @@
 * * *
 
 <div id="education">
-  <h3>Education</h3>
+  <div class="header-container">
+    <h3>Education</h3>
+    <span class="return-to-top">
+      [<a class="smaller-text" href="#main_content">top</a>]
+    </span>
+  </div>
 
   <ul>
     <li class="bullet-point-one"><p><strong>Master of Science in Computer Science</strong><br>
@@ -62,7 +67,12 @@
 * * *
 
 <div id="awards-and-recognition">
-  <h3>Awards and Recognition</h3>
+  <div class="header-container">
+    <h3>Awards and Recognition</h3>
+    <span class="return-to-top">
+      [<a class="smaller-text" href="#main_content">top</a>]
+    </span>
+  </div>
 
   <ul>
     <li class="bullet-point-one"><p><strong>CAE Champions: Excellence (x11), One CAE (x3), Empowerment (x2), Innovation (x2)</strong><br>
@@ -87,7 +97,12 @@
 * * *
 
 <div id="employment-history">
-  <h3>Employment History</h3>
+  <div class="header-container">
+    <h3>Employment History</h3>
+    <span class="return-to-top">
+      [<a class="smaller-text" href="#main_content">top</a>]
+    </span>
+  </div>
 
   <div id="cae-nov17-present" class="job-container">
     <div class="job-employer-and-duration clearfix">
@@ -187,7 +202,12 @@
 * * *
 
 <div id="skills-and-experience">
-  <h3>Skills and Experience</h3>
+  <div class="header-container">
+    <h3>Skills and Experience</h3>
+    <span class="return-to-top">
+      [<a class="smaller-text" href="#main_content">top</a>]
+    </span>
+  </div>
 
   <ul>
     <li class="bullet-point-two contains-sublist">
