@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8" />
+<meta title="Find & Replace Sequencer" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<section id="text-entry">
+	<div class="text-area-container">
+		<label for="original-text">Original text</label>
+		<textarea id="original-text" spellcheck="false"></textarea>
+	</div>
+	<div class="action-button-container">
+		<div id="run-button-container">
+			<button id="run-button">Run</button>
+		</div>
+		<!-- <div id="checkbox-container">
+			<input id="copy-on-run-checkbox" type="checkbox" checked />
+		</div>
+		<label for="copy-on-run-checkbox">Copy on Run</label> -->
+	</div>
+	<div class="text-area-container">
+		<label for="replacement-text">Replacement text</label>
+		<textarea id="replacement-text" spellcheck="false"></textarea>
+	</div>
+</section>
+
+<section id="find-replace">
+	<div id="find-replace__item-container"></div>
+	<div id="find-replace__button-container">
+		<div id="find-replace__left-buttons">
+			<button id="find-replace__new">+</button>
+		</div>
+		<div id="find-replace__right-buttons">
+			<!-- <button id="find-replace__save">Save</button>
+			<button id="find-replace__load">Load</button> -->
+		</div>
+	</div>
+</section>
+
+<footer>
+	made by me
+</footer>
+
+<script src="js/util.js"></script>
+<script src="js/dom-builders.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
