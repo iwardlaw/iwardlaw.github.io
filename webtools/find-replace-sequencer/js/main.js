@@ -8,18 +8,19 @@ function runFindReplace() {
 		}
 
 		let findPattern = item.querySelector(".input__find input").value;
-		const replaceText = item.querySelector(".input__replace input").value;
+		let replaceString = item.querySelector(".input__replace input").value;
 
 		const matchCase = item.querySelector(".option__match-case input").checked;
 		// const preserveCase = item.querySelector(".option__preserve-case input").checked;
-		const regularExpression = item.querySelector(".option__regular-expression input").checked;
+		const isRegex = item.querySelector(".option__regular-expression input").checked;
 
-		if(regularExpression) {
+		if(isRegex) {
 			const flags = matchCase ? "g" : "gi";
 			findPattern = new RegExp(findPattern, flags);
+			replaceString = replaceString.replaceAll("\\n", "\n");
 		}
 
-		text = regularExpression || matchCase ? text.replaceAll(findPattern, replaceText) : replaceAllCaseInsensitive(text, findPattern, replaceText);
+		text = isRegex || matchCase ? text.replaceAll(findPattern, replaceString) : replaceAllCaseInsensitive(text, findPattern, replaceString);
 	}
 
 	document.getElementById("replacement-text").value = text;

@@ -21,6 +21,7 @@ function replaceAllCaseInsensitive(string, pattern, replacement) {
 	}
 
 	if(typeof pattern === "object" && pattern instanceof RegExp) {
+		replacement = replacement.replaceAll("\\n", "\n");
 		return this.replaceAll(new RegExp(pattern, "gi"), replacement);
 	}
 
