@@ -26,7 +26,33 @@ function runFindReplace() {
 	document.getElementById("replacement-text").value = text;
 }
 
+function disableButtonIfEmpty(button, controllingInput) {
+	button.disabled = controllingInput.value.length === 0;
+}
+
 addFindReplaceItem();
 document.getElementById("find-replace__new").addEventListener("click", addFindReplaceItem);
 
 document.getElementById("run-button").addEventListener("click", runFindReplace);
+
+for(const closeButton of document.querySelectorAll(".config-modal .modal-close-button")) {
+	closeButton.addEventListener("click", (evt) => {
+		let parent = evt.target.parentElement;
+		while(parent && !parent.classList.contains("config-modal")) {
+			parent = parent.parentElement;
+		}
+		parent?.classList.add("hidden");
+	});
+}
+
+document.getElementById("find-replace__export-button").addEventListener("click", () => {
+	const exportModal = document.getElementById("export-modal");
+	exportModal.querySelector("textarea").value = exportList();
+	exportModal.classList.remove("hidden");
+});
+
+document.getElementById("find-replace__import-button").addEventListener("click", () => document.getElementById("import-modal").classList.remove("hidden"));
+document.getElementById("import-modal__import-button").addEventListener("click", (evt) => importList(evt.target.parentElement.querySelector("textarea")?.value, evt.target.parentElement.parentElement));
+
+document.getElementById("import-modal__textarea").addEventListener("input", (evt) => disableButtonIfEmpty(document.getElementById("import-modal__import-button"), evt.target));
+document.getElementById("original-text").addEventListener("input", (evt) => disableButtonIfEmpty(document.getElementById("run-button"), evt.target));

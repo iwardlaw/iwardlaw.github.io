@@ -8,6 +8,27 @@
 </head>
 <body>
 
+<div id="export-modal" class="config-modal hidden">
+	<div class="config-modal__content">
+		<div class="modal-close-button-container">
+			<button class="modal-close-button">&times;</button>
+		</div>
+		<label for="export-modal__textarea">Copy and save to a text or JSON file.</label>
+		<textarea id="export-modal__textarea"></textarea>
+	</div>
+</div>
+
+<div id="import-modal" class="config-modal hidden">
+	<div class="config-modal__content">
+		<div class="modal-close-button-container">
+			<button class="modal-close-button">&times;</button>
+		</div>
+		<label for="import-modal__textarea">Paste an existing JSON configuration here.</label>
+		<textarea id="import-modal__textarea"></textarea>
+		<button id="import-modal__import-button" disabled>Import</button>
+	</div>
+</div>
+
 <section id="text-entry">
 	<div class="text-area-container">
 		<label for="original-text">Original text</label>
@@ -15,7 +36,7 @@
 	</div>
 	<div class="action-button-container">
 		<div id="run-button-container">
-			<button id="run-button">Run</button>
+			<button id="run-button" disabled>Run</button>
 		</div>
 		<!-- <div id="checkbox-container">
 			<input id="copy-on-run-checkbox" type="checkbox" checked />
@@ -35,8 +56,8 @@
 			<button id="find-replace__new">+</button>
 		</div>
 		<div id="find-replace__right-buttons">
-			<!-- <button id="find-replace__save">Save</button>
-			<button id="find-replace__load">Load</button> -->
+			<button id="find-replace__export-button">Export</button>
+			<button id="find-replace__import-button">Import</button>
 		</div>
 	</div>
 </section>
@@ -46,6 +67,7 @@
 </footer>
 
 <script src="js/util.js"></script>
+<script src="js/import-export.js"></script>
 <script src="js/dom-builders.js"></script>
 <script src="js/main.js"></script>
 
