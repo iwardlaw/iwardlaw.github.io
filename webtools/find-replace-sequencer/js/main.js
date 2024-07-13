@@ -30,8 +30,11 @@ function disableButtonIfEmpty(button, controllingInput) {
 	button.disabled = controllingInput.value.length === 0;
 }
 
+document.getElementById("find-replace__item-container").appendChild(createFindReplaceGap());
 addFindReplaceItem();
-document.getElementById("find-replace__new").addEventListener("click", addFindReplaceItem);
+
+//:: Callback to addFindReplaceItem() w/o args to avoid passing the event as an arg.
+document.getElementById("find-replace__new").addEventListener("click", () => addFindReplaceItem());
 
 document.getElementById("run-button").addEventListener("click", runFindReplace);
 

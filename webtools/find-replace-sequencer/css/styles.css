@@ -189,7 +189,6 @@ footer {
 }
 
 .find-replace-item {
-	margin: 10px 0;
 	border: 1px solid #333;
 	padding: 6px;
 	border-radius: 10px;
@@ -310,6 +309,40 @@ footer {
 	-webkit-transform: translateX(var(--slider-thumb-width));
 	-ms-transform: translateX(var(--slider-thumb-width));
 	transform: translateX(var(--slider-thumb-width));
+}
+
+.find-replace-gap {
+	width: 104%;
+	height: 18px;
+	margin: 3px 0;
+	position: relative;
+	left: -4%;
+	border-radius: 5px;
+	align-content: center;
+	/* background-color: #4bfa; */
+	opacity: 0;
+}
+
+.find-replace-gap:first-of-type:last-of-type,
+.find-replace-gap:hover {
+	opacity: 1;
+}
+
+.find-replace-gap__add-button {
+	width: 32px;
+	height: 32px;
+	display: block;
+	position: relative;
+	top: -9px;
+	border-radius: inherit;
+	font-size: 1.25em;
+}
+
+.find-replace-gap__divider {
+	width: calc(100% - 15px);
+	position: relative;
+	top: 9px;
+	opacity: 0.25;
 }
 
 #find-replace__button-container {

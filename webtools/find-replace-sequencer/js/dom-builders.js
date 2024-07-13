@@ -1,4 +1,6 @@
-function addFindReplaceItem(data) {
+/* #region Find-and-Replace Items */
+/*                                */
+function addFindReplaceItem(data, atIndex) {
 	//:: <div class="find-replace-item">
 	//::    <div class="find-replace-item__controls">...</div>
 	//::    <div class="find-replace-item__input-area">...</div>
@@ -30,7 +32,15 @@ function addFindReplaceItem(data) {
 	item.appendChild(createFindReplaceInputArea(findPattern, replaceString));
 	item.appendChild(createFindReplaceOptionsArea(matchCase, isRegex));
 
-	document.getElementById("find-replace__item-container")?.appendChild(item);
+	const container = document.getElementById("find-replace__item-container");
+	if(typeof atIndex === "undefined") {
+		container.appendChild(item);
+		container.appendChild(createFindReplaceGap());
+	}
+	else {
+		container.insertBefore(item, container.children[atIndex]);
+		container.insertBefore(createFindReplaceGap(), item);
+	}
 }
 
 function createFindReplaceControlArea(isActive) {
@@ -61,11 +71,12 @@ function createFindReplaceControlArea(isActive) {
 	const closeButton = document.createElement("button");
 	closeButton.classList.add("find-replace-item__close");
 	closeButton.innerHTML = "&times;";
-	closeButton.addEventListener("click", (evt) => {
-		let parent = evt.target.parentElement;
+	closeButton.addEventListener("click", () => {
+		let parent = closeButton.parentElement;
 		while(parent && !parent.classList.contains("find-replace-item")) {
 			parent = parent.parentElement;
 		}
+		parent.nextElementSibling.replaceWith();
 		parent?.replaceWith();
 	});
 	controlArea.appendChild(closeButton);
@@ -156,3 +167,37 @@ function createFindReplaceOption(text, isSelected) {
 
 	return optionLabel;
 }
+
+function createFindReplaceGap() {
+	const gap = document.createElement("div");
+	gap.classList.add("find-replace-gap");
+
+	const divider = document.createElement("hr");
+	divider.classList.add("find-replace-gap__divider");
+	gap.appendChild(divider);
+
+	const addButton = document.createElement("button");
+	addButton.classList.add("find-replace-gap__add-button");
+	addButton.innerText = "+";
+	addButton.addEventListener("click", () => {
+		const container = document.getElementById("find-replace__item-container");
+		const itemIndex = Array.prototype.indexOf.call(container.children, gap);
+		addFindReplaceItem(getDataFromItem(gap.previousElementSibling ?? gap.nextElementSibling), itemIndex);
+	});
+	gap.appendChild(addButton);
+
+	return gap;
+}
+
+function getDataFromItem(item) {
+	return item ? {
+		isActive: item.querySelector(".find-replace-item__toggle input").checked,
+		findPattern: item.querySelector(".input__find input").value,
+		replaceString: item.querySelector(".input__replace input").value,
+		matchCase: item.querySelector(".option__match-case input").checked,
+		// preserveCase: item.querySelector(".option__preserve-case input").checked,
+		isRegex: item.querySelector(".option__regular-expression input").checked
+	} : null;
+}
+/*                                   */
+/* #endregion Find-and-Replace Items */

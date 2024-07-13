@@ -26,7 +26,7 @@ function importList(importText, modal) {
 		return;
 	}
 
-	document.getElementById("find-replace__item-container").innerHTML = "";
+	document.getElementById("find-replace__item-container").innerHTML = createFindReplaceGap().outerHTML;
 	for(const itemData of data) {
 		addFindReplaceItem(itemData);
 	}
