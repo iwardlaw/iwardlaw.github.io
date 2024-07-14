@@ -30,11 +30,38 @@ function disableButtonIfEmpty(button, controllingInput) {
 	button.disabled = controllingInput.value.length === 0;
 }
 
+function setItemCount(count) {
+	const container = document.getElementById("find-replace__item-container");
+	const items = container.querySelectorAll(".find-replace-item");
+	const countDiff = count - items.length;
+
+	if(countDiff > 0) {
+		const lastItem = Array.prototype.at.call(items, -1);
+		for(let i = 0; i < countDiff; i++) {
+			addFindReplaceItem(getDataFromItem(lastItem), atIndex = -1, incrementCount = false);
+		}
+	}
+	else {
+		for(let i = items.length - 1; i >= count; i--) {
+			removeFindReplaceItem(items[i], decrementCount = false);
+		}
+	}
+}
+
+function incrementItemCount() {
+	document.getElementById("find-replace__item-count").stepUp();
+}
+
+function decrementItemCount() {
+	document.getElementById("find-replace__item-count").stepDown();
+}
+
+document.getElementById("find-replace__item-count").value = 0;
 document.getElementById("find-replace__item-container").appendChild(createFindReplaceGap());
 addFindReplaceItem();
 
-//:: Callback to addFindReplaceItem() w/o args to avoid passing the event as an arg.
-document.getElementById("find-replace__new").addEventListener("click", () => addFindReplaceItem());
+// //:: Callback to addFindReplaceItem() w/o args to avoid passing the event as an arg.
+// document.getElementById("find-replace__new").addEventListener("click", () => addFindReplaceItem());
 
 document.getElementById("run-button").addEventListener("click", runFindReplace);
 
@@ -56,6 +83,8 @@ document.getElementById("find-replace__export-button").addEventListener("click",
 
 document.getElementById("find-replace__import-button").addEventListener("click", () => document.getElementById("import-modal").classList.remove("hidden"));
 document.getElementById("import-modal__import-button").addEventListener("click", (evt) => importList(evt.target.parentElement.querySelector("textarea")?.value, evt.target.parentElement.parentElement));
+
+document.getElementById("find-replace__item-count").addEventListener("change", (evt) => setItemCount(evt.target.value));
 
 document.getElementById("import-modal__textarea").addEventListener("input", (evt) => disableButtonIfEmpty(document.getElementById("import-modal__import-button"), evt.target));
 document.getElementById("original-text").addEventListener("input", (evt) => disableButtonIfEmpty(document.getElementById("run-button"), evt.target));

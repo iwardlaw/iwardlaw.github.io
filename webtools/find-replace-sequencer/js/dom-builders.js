@@ -1,6 +1,6 @@
 /* #region Find-and-Replace Items */
 /*                                */
-function addFindReplaceItem(data, atIndex) {
+function addFindReplaceItem(data, atIndex = -1, incrementCount = true) {
 	//:: <div class="find-replace-item">
 	//::    <div class="find-replace-item__controls">...</div>
 	//::    <div class="find-replace-item__input-area">...</div>
@@ -21,7 +21,7 @@ function addFindReplaceItem(data, atIndex) {
 		matchCase: false,
 		//preserveCase: false,
 		isRegex: false
-	}
+	};
 
 	// console.log(data);
 
@@ -33,13 +33,17 @@ function addFindReplaceItem(data, atIndex) {
 	item.appendChild(createFindReplaceOptionsArea(matchCase, isRegex));
 
 	const container = document.getElementById("find-replace__item-container");
-	if(typeof atIndex === "undefined") {
+	if(atIndex === -1) {
 		container.appendChild(item);
 		container.appendChild(createFindReplaceGap());
 	}
 	else {
 		container.insertBefore(item, container.children[atIndex]);
 		container.insertBefore(createFindReplaceGap(), item);
+	}
+
+	if(incrementCount) {
+		incrementItemCount();
 	}
 }
 
@@ -76,12 +80,20 @@ function createFindReplaceControlArea(isActive) {
 		while(parent && !parent.classList.contains("find-replace-item")) {
 			parent = parent.parentElement;
 		}
-		parent.nextElementSibling.replaceWith();
-		parent?.replaceWith();
+		removeFindReplaceItem(parent);
 	});
 	controlArea.appendChild(closeButton);
 
 	return controlArea;
+}
+
+function removeFindReplaceItem(item, decrementCount = true) {
+	item.nextElementSibling.replaceWith();
+	item.replaceWith();
+
+	if(decrementCount) {
+		decrementItemCount();
+	}
 }
 
 function createFindReplaceInputArea(findPattern, replaceString) {
