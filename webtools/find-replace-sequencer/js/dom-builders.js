@@ -1,6 +1,6 @@
 /* #region Find-and-Replace Items */
 /*                                */
-function addFindReplaceItem(data, atIndex = -1, incrementCount = true) {
+function addFindReplaceItem(data, atIndex = -1, incrementCount = true, save = true) {
 	//:: <div class="find-replace-item">
 	//::    <div class="find-replace-item__controls">...</div>
 	//::    <div class="find-replace-item__input-area">...</div>
@@ -45,6 +45,10 @@ function addFindReplaceItem(data, atIndex = -1, incrementCount = true) {
 	if(incrementCount) {
 		incrementItemCount();
 	}
+
+	if(save) {	
+		saveSequence();
+	}
 }
 
 function createFindReplaceControlArea(isActive) {
@@ -66,6 +70,7 @@ function createFindReplaceControlArea(isActive) {
 	const toggleCheckbox = document.createElement("input");
 	toggleCheckbox.type = "checkbox";
 	toggleCheckbox.checked = isActive;
+	toggleCheckbox.addEventListener("change", saveSequence);
 	toggle.appendChild(toggleCheckbox);
 
 	const sliderSpan = document.createElement("span");
@@ -87,12 +92,16 @@ function createFindReplaceControlArea(isActive) {
 	return controlArea;
 }
 
-function removeFindReplaceItem(item, decrementCount = true) {
+function removeFindReplaceItem(item, decrementCount = true, save = true) {
 	item.nextElementSibling.replaceWith();
 	item.replaceWith();
 
 	if(decrementCount) {
 		decrementItemCount();
+	}
+
+	if(save) {
+		saveSequence();
 	}
 }
 
@@ -167,6 +176,7 @@ function createFindReplaceOption(text, isSelected) {
 	const input = document.createElement("input");
 	input.type = "checkbox";
 	input.checked = isSelected;
+	input.addEventListener("change", saveSequence);
 	optionLabel.appendChild(input);
 
 	const whitespace = document.createTextNode(" ");

@@ -1,6 +1,6 @@
 function exportList() {
 	const data = [];
-	const findReplaceItems = document.getElementById("find-replace__item-container").children;
+	const findReplaceItems = document.querySelectorAll(".find-replace-item");
 
 	for(const item of findReplaceItems) {
 		data.push({
@@ -16,7 +16,7 @@ function exportList() {
 	return JSON.stringify(data, null, 2);
 }
 
-function importList(importText, modal) {
+function importList(importText, modal, save = true) {
 	let data;
 	try {
 		data = JSON.parse(importText);
@@ -28,8 +28,12 @@ function importList(importText, modal) {
 
 	document.getElementById("find-replace__item-container").innerHTML = createFindReplaceGap().outerHTML;
 	for(const itemData of data) {
-		addFindReplaceItem(itemData);
+		addFindReplaceItem(itemData, save = false);
 	}
 
-	modal.classList.add("hidden");
+	if(save) {
+		saveSequence();
+	}
+
+	modal?.classList.add("hidden");
 }

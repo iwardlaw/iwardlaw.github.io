@@ -38,7 +38,7 @@ function setItemCount(count) {
 	if(countDiff > 0) {
 		const lastItem = Array.prototype.at.call(items, -1);
 		for(let i = 0; i < countDiff; i++) {
-			addFindReplaceItem(getDataFromItem(lastItem), atIndex = -1, incrementCount = false);
+			addFindReplaceItem(getDataFromItem(lastItem), incrementCount = false);
 		}
 	}
 	else {
@@ -56,12 +56,38 @@ function decrementItemCount() {
 	document.getElementById("find-replace__item-count").stepDown();
 }
 
+function saveSequence() {
+	localStorage.setItem("find-replace-sequence", JSON.stringify({
+		originalText: document.getElementById("original-text").value,
+		replacementText: document.getElementById("replacement-text").value,
+		// copyOnRun: document.getElementById("copy-on-run-checkbox").checked,
+		findReplaceItems: exportList()
+	}));
+}
+
+function loadSequence() {
+	const sequence = JSON.parse(localStorage.getItem("find-replace-sequence"));
+	if(sequence) {
+		document.getElementById("original-text").value = sequence.originalText;
+		document.getElementById("replacement-text").value = sequence.replacementText;
+		// document.getElementById("copy-on-run-checkbox").checked = sequence.copyOnRun;
+		importList(sequence.findReplaceItems);
+	}
+	else {
+		addFindReplaceItem();
+	}
+}
+
 document.getElementById("find-replace__item-count").value = 0;
 document.getElementById("find-replace__item-container").appendChild(createFindReplaceGap());
-addFindReplaceItem();
+if(new URLSearchParams(window.location.search).has("clear-storage")) {
+	localStorage.clear();
+}
+loadSequence();
 
-// //:: Callback to addFindReplaceItem() w/o args to avoid passing the event as an arg.
-// document.getElementById("find-replace__new").addEventListener("click", () => addFindReplaceItem());
+document.getElementById("original-text").addEventListener("change", saveSequence);
+document.getElementById("replacement-text").addEventListener("change", saveSequence);
+// document.getElementById("copy-on-run-checkbox").addEventListener("change", saveSequence);
 
 document.getElementById("run-button").addEventListener("click", runFindReplace);
 
