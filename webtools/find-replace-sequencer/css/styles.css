@@ -131,6 +131,37 @@ footer {
 /*                   */
 /* #endregion Modals */
 
+/* #region Page Heading */
+/*                      */
+#page-heading {
+	margin: 10px auto;
+	text-align: center;
+	font-size: 2.5em;
+}
+
+#page-heading img {
+	height: 1rem;
+	opacity: 0.3;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+#page-heading img:hover {
+	opacity: 1;
+}
+
+#page-heading-text {
+	min-width: 20px;
+}
+
+#page-heading-text[contenteditable="true"] {
+	background-color: white;
+	border: 1px solid #8f8f9d;;
+	border-radius: 2px;
+}
+/*                         */
+/* #endregion Page Heading */
+
 /* #region Text-Entry Area */
 /*                         */
 #text-entry {

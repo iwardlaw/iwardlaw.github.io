@@ -58,6 +58,7 @@ function decrementItemCount() {
 
 function saveSequence() {
 	localStorage.setItem("find-replace-sequence", JSON.stringify({
+		pageHeading: document.getElementById("page-heading-text").value,
 		originalText: document.getElementById("original-text").value,
 		replacementText: document.getElementById("replacement-text").value,
 		// copyOnRun: document.getElementById("copy-on-run-checkbox").checked,
@@ -68,6 +69,7 @@ function saveSequence() {
 function loadSequence() {
 	const sequence = JSON.parse(localStorage.getItem("find-replace-sequence"));
 	if(sequence) {
+		document.getElementById("page-heading-text").value = sequence.pageHeading;
 		document.getElementById("original-text").value = sequence.originalText;
 		document.getElementById("replacement-text").value = sequence.replacementText;
 		// document.getElementById("copy-on-run-checkbox").checked = sequence.copyOnRun;
@@ -87,6 +89,20 @@ if(new URLSearchParams(window.location.search).has("clear-storage")) {
 	localStorage.clear();
 }
 loadSequence();
+
+document.getElementById("page-heading-locked-icon").addEventListener("click", () => {
+	document.getElementById("page-heading-text").contentEditable = true;
+	document.getElementById("page-heading-locked-icon").classList.add("hidden");
+	document.getElementById("page-heading-unlocked-icon").classList.remove("hidden");
+});
+
+document.getElementById("page-heading-unlocked-icon").addEventListener("click", () => {
+	let pageHeadingText = document.getElementById("page-heading-text");
+	pageHeadingText.contentEditable = false;
+	pageHeadingText.textContent = pageHeadingText.textContent.trim();
+	document.getElementById("page-heading-locked-icon").classList.remove("hidden");
+	document.getElementById("page-heading-unlocked-icon").classList.add("hidden");
+});
 
 document.getElementById("original-text").addEventListener("change", saveSequence);
 document.getElementById("replacement-text").addEventListener("change", saveSequence);
