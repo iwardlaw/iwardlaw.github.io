@@ -72,6 +72,9 @@ function loadSequence() {
 		document.getElementById("replacement-text").value = sequence.replacementText;
 		// document.getElementById("copy-on-run-checkbox").checked = sequence.copyOnRun;
 		importList(sequence.findReplaceItems);
+		if(sequence.originalText?.length > 0) {
+			document.getElementById("run-button").disabled = false;
+		}
 	}
 	else {
 		addFindReplaceItem();
