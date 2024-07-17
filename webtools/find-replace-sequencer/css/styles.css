@@ -159,6 +159,11 @@ footer {
 	border: 1px solid #8f8f9d;;
 	border-radius: 2px;
 }
+
+#page-heading-locked-icon {
+	/* To align it better with the unlocked icon. */
+	margin: 0 0.05em;
+}
 /*                         */
 /* #endregion Page Heading */
 
