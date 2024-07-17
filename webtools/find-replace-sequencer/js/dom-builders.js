@@ -40,8 +40,15 @@ function addFindReplaceItem(data, atIndex = -1, incrementCount = true, save = tr
 		container.appendChild(createFindReplaceGap());
 	}
 	else {
-		container.insertBefore(item, container.children[atIndex]);
-		container.insertBefore(createFindReplaceGap(), item);
+		const existingItems = container.querySelectorAll(".find-replace-item");
+		if(atIndex < 0 || existingItems.length < atIndex) {
+			console.error(`Invalid item index ${atIndex} given to ${addFindReplaceItem.name}().`);
+			return;
+		}
+		
+		const gap = createFindReplaceGap();
+		container.insertBefore(gap, existingItems[atIndex]);
+		container.insertBefore(item, gap);
 	}
 
 	if(incrementCount) {
@@ -223,7 +230,7 @@ function createFindReplaceGap() {
 	addButton.innerText = "+";
 	addButton.addEventListener("click", () => {
 		const container = document.getElementById("find-replace__item-container");
-		const itemIndex = Array.prototype.indexOf.call(container.children, gap);
+		const itemIndex = Math.floor(Array.prototype.indexOf.call(container.children, gap) / 2);
 		addFindReplaceItem(getDataFromItem(gap.previousElementSibling ?? gap.nextElementSibling), itemIndex);
 	});
 	gap.appendChild(addButton);
@@ -234,6 +241,7 @@ function createFindReplaceGap() {
 function getDataFromItem(item) {
 	return item ? {
 		isActive: item.querySelector(".find-replace-item__toggle input").checked,
+		name: item.querySelector(".find-replace-item__name-input").value,
 		findPattern: item.querySelector(".input__find input").value,
 		replaceString: item.querySelector(".input__replace input").value,
 		matchCase: item.querySelector(".option__match-case input").checked,
