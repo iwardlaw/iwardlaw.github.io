@@ -9,6 +9,7 @@ function addFindReplaceItem(data, atIndex = -1, incrementCount = true, save = tr
 
 	const {
 		isActive,
+		name,
 		findPattern,
 		replaceString,
 		matchCase,
@@ -16,6 +17,7 @@ function addFindReplaceItem(data, atIndex = -1, incrementCount = true, save = tr
 		isRegex
 	} = data ?? {
 		isActive: true,
+		name: "",
 		findPattern: "",
 		replaceString: "",
 		matchCase: false,
@@ -28,7 +30,7 @@ function addFindReplaceItem(data, atIndex = -1, incrementCount = true, save = tr
 	const item = document.createElement("div");
 	item.classList.add("find-replace-item");
 
-	item.appendChild(createFindReplaceControlArea(isActive));
+	item.appendChild(createFindReplaceControlArea(isActive, name));
 	item.appendChild(createFindReplaceInputArea(findPattern, replaceString));
 	item.appendChild(createFindReplaceOptionsArea(matchCase, isRegex));
 
@@ -51,11 +53,15 @@ function addFindReplaceItem(data, atIndex = -1, incrementCount = true, save = tr
 	}
 }
 
-function createFindReplaceControlArea(isActive) {
+function createFindReplaceControlArea(isActive, name) {
 	//:: <div class="find-replace-item__controls">
 	//::   <label class="find-replace-item__toggle">
 	//::     <input type="checkbox" checked />
 	//::     <span class="find-replace-item__toggle-slider"></span>
+	//::   </label>
+	//::   <label class="find-replace-item__name">
+	//::     Name
+	//::     <input type="text" />
 	//::   </label>
 	//::   <button class="find-replace-item__close">×</button>
 	//:: </div>
@@ -76,6 +82,20 @@ function createFindReplaceControlArea(isActive) {
 	const sliderSpan = document.createElement("span");
 	sliderSpan.classList.add("find-replace-item__toggle-slider");
 	toggle.appendChild(sliderSpan);
+
+	const nameLabel = document.createElement("label");
+	nameLabel.classList.add("find-replace-item__name");
+	nameLabel.textContent = "Name ";
+	controlArea.appendChild(nameLabel);
+
+	const nameInput = document.createElement("input");
+	nameInput.classList.add("find-replace-item__name-input");
+	nameInput.type = "text";
+	if(name !== null && typeof name !== "undefined") {
+		nameInput.value = name;
+	}
+	nameLabel.addEventListener("change", saveSequence);
+	nameLabel.appendChild(nameInput);
 
 	const closeButton = document.createElement("button");
 	closeButton.classList.add("find-replace-item__close");

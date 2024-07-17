@@ -5,6 +5,7 @@ function exportList() {
 	for(const item of findReplaceItems) {
 		data.push({
 			isActive: item.querySelector(".find-replace-item__toggle input").checked,
+			name: item.querySelector(".find-replace-item__name-input").value,
 			findPattern: item.querySelector(".input__find input").value,
 			replaceString: item.querySelector(".input__replace input").value,
 			matchCase: item.querySelector(".option__match-case input").checked,
