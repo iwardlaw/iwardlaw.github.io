@@ -232,6 +232,12 @@ footer {
 	border: 1px solid #333;
 	padding: 6px;
 	border-radius: 10px;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.find-replace-item.selected {
+	background-color: lightblue;
 }
 
 .find-replace-item:first-of-type {

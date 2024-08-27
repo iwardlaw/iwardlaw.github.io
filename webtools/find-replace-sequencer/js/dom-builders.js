@@ -29,6 +29,14 @@ function addFindReplaceItem(data, atIndex = -1, incrementCount = true, save = tr
 
 	const item = document.createElement("div");
 	item.classList.add("find-replace-item");
+	item.addEventListener("click", (evt) => {
+		if(evt.shiftKey) {
+			ItemSelector.setRangeSelectedFromRangeBasis(item, true, keepPrevious = evt.ctrlKey);
+		}
+		else {
+			ItemSelector.toggleSelected(item, setAsRangeBasis = true, keepPrevious = evt.ctrlKey);
+		}
+	});
 
 	item.appendChild(createFindReplaceControlArea(isActive, name));
 	item.appendChild(createFindReplaceInputArea(findPattern, replaceString));
@@ -102,6 +110,7 @@ function createFindReplaceControlArea(isActive, name) {
 		nameInput.value = name;
 	}
 	nameLabel.addEventListener("change", saveSequence);
+	nameLabel.addEventListener("click", (evt) => evt.stopPropagation());
 	nameLabel.appendChild(nameInput);
 
 	const closeButton = document.createElement("button");
@@ -168,6 +177,7 @@ function createFindReplaceInput(title, value) {
 	if(value !== null && typeof value !== "undefined") {
 		input.value = value;
 	}
+	input.addEventListener("click", (evt) => evt.stopPropagation());
 	inputLabel.appendChild(input);
 
 	return inputLabel;
@@ -199,11 +209,13 @@ function createFindReplaceOption(text, isSelected) {
 	const optionLabel = document.createElement("label");
 	const optionClass = text.toLowerCase().replace(/\s+/g, "-");
 	optionLabel.classList.add("find-replace-item__option", `option__${optionClass}`);
+	optionLabel.addEventListener("click", (evt) => evt.stopPropagation());
 
 	const input = document.createElement("input");
 	input.type = "checkbox";
 	input.checked = isSelected;
 	input.addEventListener("change", saveSequence);
+	input.addEventListener("click", (evt) => evt.stopPropagation());
 	optionLabel.appendChild(input);
 
 	const whitespace = document.createTextNode(" ");
