@@ -1,5 +1,7 @@
 const ItemSelector = (function() {
+	/// private
 	const selectedItems = new Set();
+	/// private
 	let rangeBasisItem = null;
 
 	/// public
@@ -91,7 +93,53 @@ const ItemSelector = (function() {
 		}
 	}
 
-	return {
+	/// public
+	function applyControlValueToSelected(control, value) {
+		switch(control) {
+			case FindReplaceControl.OnOffToggle:
+				for(const item of selectedItems) {
+
+				}
+				break;
+			case FindReplaceControl.CloseButton:
+				for(const item of selectedItems) {
+
+				}
+				break;
+			case FindReplaceControl.Name:
+				for(const item of selectedItems) {
+
+				}
+				break;
+			case FindReplaceControl.FindPattern:
+				for(const item of selectedItems) {
+
+				}
+				break;
+			case FindReplaceControl.ReplaceString:
+				for(const item of selectedItems) {
+
+				}
+				break;
+			case FindReplaceControl.MatchCase:
+				for(const item of selectedItems) {
+
+				}
+				break;
+			case FindReplaceControl.PreserveCase:
+				for(const item of selectedItems) {
+
+				}
+				break;
+			case FindReplaceControl.RegularExpression:
+				for(const item of selectedItems) {
+
+				}
+				break;
+		}
+	}
+
+	return Object.freeze({
 		setSelected: setSelected,
 		toggleSelected: toggleSelected,
 		setRangeSelected: setRangeSelected,
@@ -99,5 +147,5 @@ const ItemSelector = (function() {
 		clear: clear,
 		getLastInteracted: getRangeBasisItem,
 		getAllSelected: getAllSelected
-	};
+	});
 })();

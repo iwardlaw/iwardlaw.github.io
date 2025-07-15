@@ -43,3 +43,57 @@ function replaceAllCaseInsensitive(string, pattern, replacement) {
 
 	return ret;
 }
+
+function substituteRegexReplacementEscapes(replaceString) {
+	return replaceString
+		.replaceAll("\\f", "\f")
+		.replaceAll("\\n", "\n")
+		.replaceAll("\\r", "\r")
+		.replaceAll("\\t", "\t")
+		.replaceAll("\\v", "\v")
+		.replaceAll(/\\U(.)/g, (_match, group1) => group1.toUpperCase())
+		.replaceAll(/\\L(.)/g, (_match, group1) => group1.toLowerCase());
+}
+
+function queryInParents(element, selector) {
+	let parent = element.parentElement;
+	while(parent !== null) {
+		if(parent.matches(selector)) {
+			return parent;
+		}
+		parent = parent.parentElement;
+	}
+
+	return null;
+}
+
+function arrayHasIndex(arr, idx) {
+	return 0 <= idx && idx < arr.length;
+}
+
+function shiftWithinArray(arr, startIdx, stopIdx, shouldRotate) {
+	if(!arrayHasIndex(arr, startIdx) || !arrayHasIndex(arr, stopIdx)) {
+		throw new RangeError("Indices provided to 'shiftArray' must be within the array's bounds.");
+	}
+
+	if(startIdx === stopIdx) {
+		return;
+	}
+
+	const lastValue = arr[stopIdx];
+
+	if(startIdx > stopIdx) {
+		for(let i = stopIdx; i > startIdx; i--) {
+			arr[i] = arr[i - 1];
+		}
+	}
+	else if(startIdx < stopIdx) {
+		for(let i = stopIdx; i < startIdx; i++) {
+			arr[i] = arr[i + 1];
+		}
+	}
+
+	if(shouldRotate) {
+		arr[startIdx] = lastValue;
+	}
+}

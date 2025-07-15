@@ -261,5 +261,12 @@ function getDataFromItem(item) {
 		isRegex: item.querySelector(".option__regular-expression input").checked
 	} : null;
 }
+
+function selectControl(evt, controlName, value) {
+	evt.stopPropagation();
+	if(evt.target.queryInParents(".find-replace-element")?.classList.contains("selected")) {
+		ItemSelector.applyToSelected(controlName, value);
+	}
+}
 /*                                   */
 /* #endregion Find-and-Replace Items */
