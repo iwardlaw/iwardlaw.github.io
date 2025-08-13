@@ -46,6 +46,49 @@ const FindReplaceItem = (function() {
 			// preserveCaseCheckbox,
 			regexCheckbox
 		} = createElements(data);
+
+		const publicSelf = Object.freeze({
+			get isSelected() { return root.classList.contains("selected") },
+			get isActive() { return toggle.checked },
+			set isActive(value) { toggle.checked = value },
+			get name() { return nameField.value },
+			set name(value) { nameField.value = value },
+			get findPattern() { return findField.value },
+			set findPattern(value) { findField.value = value },
+			get replaceString() { return replaceField.value },
+			set replaceString(value) { replaceField.value = value },
+			get matchCase() { return matchCaseCheckbox.checked },
+			set matchCase(value) { matchCaseCheckbox.checked = value },
+			// get preserveCase() { return preserveCaseCheckbox.checked },
+			// set preserveCase(value) { preserveCaseCheckbox.checked = value },
+			get isRegex() { return regexCheckbox.checked },
+			set isRegex(value) { regexCheckbox.checked = value },
+			get data() {
+				return {
+					isActive: this.isActive,
+					name: this.name,
+					findPattern: this.findPattern,
+					replaceString: this.replaceString,
+					matchCase: this.matchCase,
+					// preserveCase: this.preserveCase,
+					isRegex: this.isRegex
+				}
+			},
+			set data(value) {
+				this.isActive = value.isActive;
+				this.name = value.name;
+				this.findPattern = value.findPattern;
+				this.replaceString = value.replaceString;
+				this.matchCase = value.matchCase;
+				// this.preserveCase = value.preserveCase;
+				this.isRegex = value.isRegex;
+			},
+			id: id,
+			appendTo: appendTo,
+			insertBefore: insertBefore,
+			insertAfter: insertAfter,
+			destroy: destroy
+		});
 		//#endregion Instance Data
 
 		//#region Public Instance API
@@ -194,7 +237,7 @@ const FindReplaceItem = (function() {
 			const closeButton = document.createElement("button");
 			closeButton.classList.add(CssClasses.CloseButton);
 			closeButton.innerHTML = "&times;";
-			closeButton.addEventListener("click", destroy);
+			closeButton.addEventListener("click", () => FindReplaceList.remove(publicSelf));
 			
 			return closeButton;
 		}
@@ -349,48 +392,7 @@ const FindReplaceItem = (function() {
 		}
 		//#endregion Private Instance API
 
-		return Object.freeze({
-			get isSelected() { return root.classList.contains("selected") },
-			get isActive() { return toggle.checked },
-			set isActive(value) { toggle.checked = value },
-			get name() { return nameField.value },
-			set name(value) { nameField.value = value },
-			get findPattern() { return findField.value },
-			set findPattern(value) { findField.value = value },
-			get replaceString() { return replaceField.value },
-			set replaceString(value) { replaceField.value = value },
-			get matchCase() { return matchCaseCheckbox.checked },
-			set matchCase(value) { matchCaseCheckbox.checked = value },
-			// get preserveCase() { return preserveCaseCheckbox.checked },
-			// set preserveCase(value) { preserveCaseCheckbox.checked = value },
-			get isRegex() { return regexCheckbox.checked },
-			set isRegex(value) { regexCheckbox.checked = value },
-			get data() {
-				return {
-					isActive: this.isActive,
-					name: this.name,
-					findPattern: this.findPattern,
-					replaceString: this.replaceString,
-					matchCase: this.matchCase,
-					// preserveCase: this.preserveCase,
-					isRegex: this.isRegex
-				}
-			},
-			set data(value) {
-				this.isActive = value.isActive;
-				this.name = value.name;
-				this.findPattern = value.findPattern;
-				this.replaceString = value.replaceString;
-				this.matchCase = value.matchCase;
-				// this.preserveCase = value.preserveCase;
-				this.isRegex = value.isRegex;
-			},
-			id: id,
-			appendTo: appendTo,
-			insertBefore: insertBefore,
-			insertAfter: insertAfter,
-			destroy: destroy
-		});
+		return publicSelf;
 	}
 	//#endregion Public Static API
 

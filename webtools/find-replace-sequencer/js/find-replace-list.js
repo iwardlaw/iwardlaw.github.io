@@ -1,6 +1,6 @@
 const FindReplaceList = (function() {
 	//#region Data
-	const self = this;
+	// const self = this;
 	const items = [];
 	const gaps = [];
 	const initialGap = makeNewGap();
@@ -10,6 +10,7 @@ const FindReplaceList = (function() {
 	initialGap.appendTo(root);
 
 	const counter = document.getElementById("find-replace__item-count");
+	counter.value = 0;
 	counter.addEventListener("change", () => {
 		if(!isSettingCounterValue) {
 			setLength(counter.value, setCounterValue = false);
@@ -107,8 +108,29 @@ const FindReplaceList = (function() {
 		insertAt(item, items.length);
 	}
 
-	function removeAt(idx) {
+	function remove(item) {
+		let idx = items.indexOf(item);
+		if(idx === -1) {
+			throw new Error("Item does not exist in the list. Cannot remove.");
+		}
 
+		removeAt(idx);
+	}
+
+	function removeAt(idx) {
+		if(idx < 0 || items.length < idx) {
+			throw new RangeError(`Cannot remove item at nonexistent invalid ${idx}.`);
+		}
+
+		items[idx].destroy();
+		items.splice(idx, 1);
+
+		gaps[idx].destroy();
+		gaps.splice(idx, 1);
+
+		isSettingCounterValue = true;
+		counter.stepDown();
+		isSettingCounterValue = false;
 	}
 
 	function clear() {
@@ -183,12 +205,13 @@ const FindReplaceList = (function() {
 		const newItemData = items.at(-1)?.data ?? null;
 		const fillStartIndex = items.length;
 
-		items.length = newLength;
-		gaps.length = newLength;
+		// items.length = newLength;
+		// gaps.length = newLength;
 		
-		for(let i = fillStartIndex; i <= newLength; i++) {
-			items[i] = makeNewItem(newItemData);
-			gaps[i] = makeNewGap();
+		for(let i = fillStartIndex; i < newLength; i++) {
+			// items[i] = makeNewItem(newItemData);
+			// gaps[i] = makeNewGap();
+			insertAtGap(gaps.at(-1));
 		}
 	}
 
@@ -222,6 +245,7 @@ const FindReplaceList = (function() {
 		set exportModal(value) { exportModal = value },
 		insertAt: insertAt,
 		append: append,
+		remove: remove,
 		removeAt: removeAt,
 		reset: reset,
 		importTextFromModal: importTextFromModal,

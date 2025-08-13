@@ -212,10 +212,11 @@ input {
 
 #page-heading-text {
 	min-width: 20px;
+	padding: 0 0.5rem;
 }
 
 #page-heading-text[contenteditable="true"] {
-	background-color: white;
+	background-color: var(--input-bg-color);
 	border: 1px solid var(--soft-border-color);
 	border-radius: 2px;
 }
