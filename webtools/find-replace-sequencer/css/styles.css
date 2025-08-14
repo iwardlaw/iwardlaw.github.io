@@ -189,7 +189,16 @@ input {
 
 /* #region Page Heading */
 /*                      */
+#heading-area {
+	display: flex;
+}
+
+.theme-dark #heading-area img {
+	filter: invert(100%);
+}
+
 #page-heading {
+	width: 80%;
 	margin: 10px auto;
 	text-align: center;
 	font-size: 2.5em;
@@ -202,12 +211,8 @@ input {
 	cursor: pointer;
 }
 
-.theme-dark #page-heading img {
-	filter: invert(100%);
-}
-
 #page-heading img:hover {
-	opacity: 1;
+	opacity: 0.75;
 }
 
 #page-heading-text {
@@ -224,6 +229,48 @@ input {
 #page-heading-locked-icon {
 	/* To align it better with the unlocked icon. */
 	margin: 0 0.05em;
+}
+
+.heading-area-side-div {
+	width: 10%;
+	align-content: center;
+}
+
+.heading-area-side-div .element-wrapper {
+	display: flex;
+}
+
+.theme-select-img-wrapper {
+	flex: 1;
+}
+
+#theme-select-left-img-wrapper {
+	margin-right: 6px;
+	text-align: right;
+}
+
+#theme-select-right-img-wrapper {
+	margin-left: 6px;
+	text-align: left;
+}
+
+.theme-select-img {
+	height: 1.3rem;
+	display: inline-block;
+	flex: 1;
+	vertical-align: middle;
+	opacity: 0.75;
+}
+
+.theme-select-img[src$='moon.svg'] {
+	position: relative;
+	left: 2px;
+}
+
+#theme-select-toggle {
+	width: var(--slider-width);
+	height: var(--slider-height);
+	position: relative;
 }
 /*                         */
 /* #endregion Page Heading */

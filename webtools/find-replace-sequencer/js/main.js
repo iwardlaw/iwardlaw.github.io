@@ -118,3 +118,5 @@ document.getElementById("import-modal__import-button").addEventListener("click",
 
 document.getElementById("import-modal__textarea").addEventListener("input", (evt) => disableButtonIfEmpty(document.getElementById("import-modal__import-button"), evt.target));
 document.getElementById("original-text").addEventListener("input", (evt) => disableButtonIfEmpty(document.getElementById("run-button"), evt.target));
+
+document.querySelector("#theme-select-toggle input").addEventListener("change", (evt) => evt.target.checked ? document.body.classList.remove("theme-dark") : document.body.classList.add("theme-dark"));
