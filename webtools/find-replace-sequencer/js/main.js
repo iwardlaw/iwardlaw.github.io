@@ -36,6 +36,7 @@ function disableButtonIfEmpty(button, controllingInput) {
 function saveSequence() {
 	localStorage.setItem("find-replace-sequence", JSON.stringify({
 		pageHeading: document.getElementById("page-heading-text").value,
+		isLightTheme: document.body.classList.contains("theme-dark"),
 		originalText: document.getElementById("original-text").value,
 		replacementText: document.getElementById("replacement-text").value,
 		// copyOnRun: document.getElementById("copy-on-run-checkbox").checked,
@@ -48,6 +49,7 @@ function loadSequence() {
 	const sequence = JSON.parse(localStorage.getItem("find-replace-sequence"));
 	if(sequence) {
 		document.getElementById("page-heading-text").value = sequence.pageHeading;
+		setTheme(isSetToLight = sequence.isLightTheme, setThemeSlider = true);
 		document.getElementById("original-text").value = sequence.originalText;
 		document.getElementById("replacement-text").value = sequence.replacementText;
 		// document.getElementById("copy-on-run-checkbox").checked = sequence.copyOnRun;
@@ -61,6 +63,21 @@ function loadSequence() {
 		// addFindReplaceItem();
 		FindReplaceList.reset();
 	}
+}
+
+function setTheme(setToLight, setThemeSlider) {
+	if(setToLight) {
+		document.body.classList.remove("theme-dark");
+	}
+	else {
+		document.body.classList.add("theme-dark")
+	}
+
+	if(setThemeSlider) {
+		document.querySelector("#theme-select-toggle input").checked = setToLight;
+	}
+
+	saveSequence();
 }
 
 // document.getElementById("find-replace__item-count").value = 0;
@@ -119,4 +136,10 @@ document.getElementById("import-modal__import-button").addEventListener("click",
 document.getElementById("import-modal__textarea").addEventListener("input", (evt) => disableButtonIfEmpty(document.getElementById("import-modal__import-button"), evt.target));
 document.getElementById("original-text").addEventListener("input", (evt) => disableButtonIfEmpty(document.getElementById("run-button"), evt.target));
 
-document.querySelector("#theme-select-toggle input").addEventListener("change", (evt) => evt.target.checked ? document.body.classList.remove("theme-dark") : document.body.classList.add("theme-dark"));
+document.querySelector("#theme-select-toggle input").addEventListener("change", (evt) => setTheme(evt.target.checked, setThemeSlider = false));
+
+let browserDarkThemePreference = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
+setTheme(setToLight = !browserDarkThemePreference.matches, setThemeSlider = true);
+// browserDarkThemePreference.addEventListener('change', (evt) => {
+// 	setTheme(setToLight = !evt.matches, setThemeSlider = true);
+// });
