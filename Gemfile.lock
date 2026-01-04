@@ -245,7 +245,6 @@ GEM
     rexml (3.3.6)
       strscan
     rouge (3.30.0)
-    ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
     safe_yaml (1.0.5)
     sass (3.7.4)
@@ -257,7 +256,6 @@ GEM
       addressable (>= 2.3.5)
       faraday (>= 0.17.3, < 3)
     simpleidn (0.2.3)
-      unf (~> 0.1.4)
     strscan (3.1.0)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
@@ -266,7 +264,7 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (1.8.0)
-    uri (0.13.0)
+    uri (0.13.3)
     webrick (1.8.1)
 
 PLATFORMS
